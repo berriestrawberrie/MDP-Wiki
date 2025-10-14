@@ -1,10 +1,27 @@
 #root {
   width: 100vw;
   padding: 10px;
+  font-family: "Oldenburg", serif;
+  font-style: normal;
 }
+.cherry-font {
+  font-family: "Cherry Bomb One", system-ui;
+  font-style: normal;
+}
+h2 {
+  font-size: 6rem;
+  letter-spacing: 2px;
+}
+
+.content-font {
+  font-family: "Oldenburg", serif;
+  font-style: normal;
+}
+
 .header_container {
-  background-image: url("../public/ui/blue.png");
-  height: 800px;
+  background-image: url("../public/ui/long-blue.png");
+  background-size: cover;
+  height: 700px;
 }
 .logo {
   height: 6em;
@@ -40,6 +57,27 @@
 
 .read-the-docs {
   color: #888;
+}
+
+/*PHONES */
+@media screen and (max-width: 400px) {
+  .header_container {
+    height: 300px;
+  }
+  h2 {
+    font-size: 3rem;
+    letter-spacing: 2px;
+  }
+}
+
+/*TABLET*/
+@media screen and (max-width: 768px) {
+  .header_container {
+    height: 500px;
+  }
+  h2 {
+    font-size: 4rem;
+  }
 }
 
 @import "tailwindcss";

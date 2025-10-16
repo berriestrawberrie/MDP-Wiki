@@ -1,9 +1,9 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FaCaretDown } from "react-icons/fa6";
-import { TiThMenu } from "react-icons/ti";
 import { IoClose } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
+import { TiThMenu } from "react-icons/ti";
 
 export default function Menu() {
   const [openDropdown, setOpenDropdown] = useState(null);
@@ -17,16 +17,29 @@ export default function Menu() {
   const toggleMenu = () => {
     setOpenMenu((prev) => !prev);
   };
+  //CONTROL THE MENU BAR TRANSITION
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 100);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <>
       {/* Menu Toggle Button */}
-      <div className="fixed top-4 left-4 z-50">
+      <div
+        className={`fixed top-0 left-0 z-50 p-1 w-full transition-colors duration-300 ${
+          scrolled ? "bg-white" : "bg-transparent"
+        }`}
+      >
         <button
           onClick={toggleMenu}
-          className={`text-5xl ${
-            openMenu ? "text-sky-500 text-left" : "text-white"
-          }`}
+          className={`text-3xl ${scrolled ? " text-sky-500" : "text-white"}`}
         >
           {openMenu ? <IoClose /> : <TiThMenu />}
         </button>
@@ -39,6 +52,28 @@ export default function Menu() {
         }`}
       >
         <nav className="mt-14 space-y-2">
+          <button
+            onClick={() => toggleDropdown("avatars")}
+            className="w-full font-bold flex gap-2 justify-between items-center text-left px-4 py-2 rounded hover:bg-sky-100"
+          >
+            Players <FaCaretDown />
+          </button>
+          {openDropdown === "avatars" && (
+            <div className="ml-4 space-y-1">
+              <Link
+                to="/allponies"
+                className="block text-right px-4 py-1 hover:bg-sky-100 rounded"
+              >
+                Playable Races
+              </Link>
+              <Link
+                to="/ponyDesign"
+                className="block text-right px-4 py-1 hover:bg-sky-100 rounded"
+              >
+                Player Skills
+              </Link>
+            </div>
+          )}
           <button
             onClick={() => toggleDropdown("dashboard")}
             className="w-full font-bold flex gap-2 justify-between items-center text-left px-4 py-2 rounded hover:bg-sky-100"
@@ -53,44 +88,45 @@ export default function Menu() {
               >
                 Pony Types
               </Link>
-              <a
-                href="#"
+              <Link
+                to="/ponyDesign"
                 className="block text-right px-4 py-1 hover:bg-sky-100 rounded"
               >
-                Stats
-              </a>
+                Design
+              </Link>
+              <Link
+                to="/ponyCustom"
+                className="block text-right px-4 py-1 hover:bg-sky-100 rounded"
+              >
+                Customizing
+              </Link>
+              <Link
+                to="/glimmerpane"
+                className="block text-right px-4 py-1 hover:bg-sky-100 rounded"
+              >
+                Glimmerpane
+              </Link>
             </div>
           )}
 
-          <button
-            onClick={() => toggleDropdown("projects")}
+          <Link
+            to="/breeding"
             className="w-full  font-bold  flex gap-2 items-center justify-between text-left px-4 py-2 rounded hover:bg-sky-100"
           >
-            Projects <FaCaretDown />
-          </button>
-          {openDropdown === "projects" && (
-            <div className="ml-4 space-y-1">
-              <a
-                href="#"
-                className="block text-right px-4 py-1 hover:bg-sky-100 rounded"
-              >
-                Active
-              </a>
-              <a
-                href="#"
-                className="block text-right px-4 py-1 hover:bg-sky-100 rounded"
-              >
-                Archived
-              </a>
-            </div>
-          )}
-
-          <a
-            href="#"
-            className="px-4 flex font-bold justify-start py-2 rounded hover:bg-sky-100"
+            Breeding
+          </Link>
+          <Link
+            to=""
+            className="w-full text-gray-200  font-bold  flex gap-2 items-center justify-between text-left px-4 py-2 rounded hover:bg-sky-100"
           >
-            Settings
-          </a>
+            Socializing
+          </Link>
+          <Link
+            to="/about"
+            className="w-full  font-bold  flex gap-2 items-center justify-between text-left px-4 py-2 rounded hover:bg-sky-100"
+          >
+            About Me
+          </Link>
         </nav>
       </aside>
     </>

@@ -1,13 +1,13 @@
 import Layout from "../components/layout/simpleheader";
 
-function Home() {
+function Blank() {
   return (
     <>
-      <Layout title={"Home"}>
+      <Layout title={"Blank Page Title"}>
         <div>This goes inside the Body</div>
       </Layout>
     </>
   );
 }
 
-export default Home;
+export default Blank;

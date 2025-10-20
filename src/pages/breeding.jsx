@@ -82,8 +82,22 @@ function Breeding() {
           <p>
             As of this update there are no hybrid pony types. However, in the
             future there will be hybrid pony types that can only be achieved
-            through breeding. So stay tuned.
+            through breeding. Here are some initial ideas:
           </p>
+          <table>
+            <tr className="tr-blue">
+              <td>Sire x Dam</td>
+              <td>Hybrid </td>
+            </tr>
+            <tr>
+              <td>Unicorn x Dragon</td>
+              <td>Kirin Pony</td>
+            </tr>
+            <tr>
+              <td>Kittling x Avian</td>
+              <td>Griffin Pony</td>
+            </tr>
+          </table>
           <Element name="#mixing">
             <h3>How Colors Mix?</h3>
           </Element>
@@ -119,7 +133,7 @@ function Breeding() {
             the parents colors for each slot.
           </p>
           <table className="mx-auto table-auto">
-            <tr>
+            <tr className="tr-blue">
               <td>R=Red</td>
               <td>G=Green</td>
               <td>B=Blue</td>
@@ -161,13 +175,13 @@ function Breeding() {
             range of the parents let's contine the example:
           </p>
           <table className="mx-auto table-auto">
-            <tr>
+            <tr className="tr-blue">
               <td>If Maximum</td>
             </tr>
             <tr>
               <td>New Hue = Max - (Distance x Random %) </td>
             </tr>
-            <tr>
+            <tr className="tr-blue">
               <td>If Minimum</td>
             </tr>
             <tr>
@@ -180,7 +194,7 @@ function Breeding() {
             whole number.
           </p>
           <table className="mx-auto table-auto">
-            <tr>
+            <tr className="tr-blue">
               <td>Calculate</td>
               <td>Result</td>
             </tr>
@@ -205,7 +219,7 @@ function Breeding() {
             possible outcome:
           </p>
           <table className="mx-auto table-auto">
-            <tr>
+            <tr className="tr-blue">
               <td>Calculate</td>
               <td>Result</td>
             </tr>
@@ -232,7 +246,7 @@ function Breeding() {
             logic to get the final baby color.
           </p>
           <table className="mx-auto table-auto">
-            <tr>
+            <tr className="tr-blue">
               <td>Color</td>
               <td>Min</td>
               <td>Max</td>
@@ -298,10 +312,10 @@ function Breeding() {
           </Element>
           <p>There are four possible special trait slots:</p>
           <ul className="ms-4">
-            <li>1. Face</li>
-            <li>2. Leg</li>
-            <li>3. Body</li>
-            <li>4. Hair</li>
+            <li>(Top) Face</li>
+            <li>Leg</li>
+            <li>Body</li>
+            <li>(Bottom) Hair</li>
           </ul>
           <p>
             The order show is the how the layers will appear on the pony. Face

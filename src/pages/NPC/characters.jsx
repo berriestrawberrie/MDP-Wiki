@@ -1,13 +1,13 @@
 import Layout from "../../components/layout/simpleheader";
 
-function PonyCustom() {
+function Characters() {
   return (
     <>
-      <Layout title={"Customize Ponies"}>
+      <Layout title={"Characters"}>
         <div>This goes inside the Body</div>
       </Layout>
     </>
   );
 }
 
-export default PonyCustom;
+export default Characters;

@@ -39,7 +39,9 @@ export default function Menu() {
       >
         <button
           onClick={toggleMenu}
-          className={`text-3xl ${scrolled ? " text-sky-500" : "text-white"}`}
+          className={`text-3xl ${
+            scrolled || openMenu ? " text-sky-500" : "text-white"
+          }`}
         >
           {openMenu ? <IoClose /> : <TiThMenu />}
         </button>
@@ -61,16 +63,44 @@ export default function Menu() {
           {openDropdown === "avatars" && (
             <div className="ml-4 space-y-1">
               <Link
-                to="/allponies"
+                to="/avatars"
                 className="block text-right px-4 py-1 hover:bg-sky-100 rounded"
               >
-                Playable Races
+                Player Avatars
               </Link>
               <Link
-                to="/ponyDesign"
+                to="/playerSkills"
                 className="block text-right px-4 py-1 hover:bg-sky-100 rounded"
               >
                 Player Skills
+              </Link>
+              <Link
+                to="/communication"
+                className="block text-right px-4 py-1 hover:bg-sky-100 rounded"
+              >
+                Communication
+              </Link>
+            </div>
+          )}
+          <button
+            onClick={() => toggleDropdown("npcs")}
+            className="w-full font-bold flex gap-2 justify-between items-center text-left px-4 py-2 rounded hover:bg-sky-100"
+          >
+            NPCs <FaCaretDown />
+          </button>
+          {openDropdown === "npcs" && (
+            <div className="ml-4 space-y-1">
+              <Link
+                to="/characters"
+                className="block text-right px-4 py-1 hover:bg-sky-100 rounded"
+              >
+                Characters
+              </Link>
+              <Link
+                to="/socializing"
+                className="block text-right px-4 py-1 hover:bg-sky-100 rounded"
+              >
+                Socializing
               </Link>
             </div>
           )}
@@ -94,18 +124,12 @@ export default function Menu() {
               >
                 Design
               </Link>
-              <Link
-                to="/ponyCustom"
-                className="block text-right px-4 py-1 hover:bg-sky-100 rounded"
-              >
+              <span className="block text-right px-4 py-1 hover:bg-sky-100 rounded text-gray-400 cursor-not-allowed">
                 Customizing
-              </Link>
-              <Link
-                to="/glimmerpane"
-                className="block text-right px-4 py-1 hover:bg-sky-100 rounded"
-              >
+              </span>
+              <span className="block text-right px-4 py-1 hover:bg-sky-100 rounded text-gray-400 cursor-not-allowed">
                 Glimmerpane
-              </Link>
+              </span>
             </div>
           )}
 
@@ -116,11 +140,12 @@ export default function Menu() {
             Breeding
           </Link>
           <Link
-            to=""
-            className="w-full text-gray-200  font-bold  flex gap-2 items-center justify-between text-left px-4 py-2 rounded hover:bg-sky-100"
+            to="/competitions"
+            className="w-full  font-bold  flex gap-2 items-center justify-between text-left px-4 py-2 rounded hover:bg-sky-100"
           >
-            Socializing
+            Competitions
           </Link>
+
           <Link
             to="/about"
             className="w-full  font-bold  flex gap-2 items-center justify-between text-left px-4 py-2 rounded hover:bg-sky-100"

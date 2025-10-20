@@ -6,6 +6,12 @@ import About from "./pages/about";
 import PonyCustom from "./pages/pony/customization";
 import PonyDesign from "./pages/pony/design";
 import Glimmerpane from "./pages/pony/glimmerpane";
+import Avatars from "./pages/players/avatars";
+import PlayerSkills from "./pages/players/skills";
+import Contest from "./pages/contes";
+import Social from "./pages/NPC/social";
+import Commun from "./pages/players/communicate";
+import Characters from "./pages/NPC/characters";
 
 import "./App.css";
 
@@ -19,6 +25,12 @@ function App() {
       <Route path="/ponyCustom" element={<PonyCustom />} />
       <Route path="/ponyDesign" element={<PonyDesign />} />
       <Route path="/glimmerpane" element={<Glimmerpane />} />
+      <Route path="/avatars" element={<Avatars />} />
+      <Route path="/playerSkills" element={<PlayerSkills />} />
+      <Route path="/competitions" element={<Contest />} />
+      <Route path="/socializing" element={<Social />} />
+      <Route path="/communication" element={<Commun />} />
+      <Route path="/characters" element={<Characters />} />
     </Routes>
   );
 }

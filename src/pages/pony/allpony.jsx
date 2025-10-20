@@ -1,5 +1,6 @@
 import Layout from "../../components/layout/simpleheader";
 import Slideshow from "../../components/images/slideshow";
+import { Link } from "react-router-dom";
 function AllPony() {
   return (
     <>
@@ -9,7 +10,13 @@ function AllPony() {
           are all the current breeds available, but there will be more types to
           come. Including hybrid ponies and seasonal types that are only
           available at certain times of the year. Female and male baby ponies
-          look the same. It will take a pony (14)
+          look the same. It will take a pony (14) days to grow from a baby to
+          adult. Only adult ponies are able to breed and it will take (5) days
+          from date of pregnancy for a new pony to be born. Check out the{" "}
+          <Link to="/breeding">
+            <span class="cherry-font text-sky-400 text-2xl">Breeding Page</span>
+          </Link>{" "}
+          if you'd like to learn more about the breeding process.
           {/*UNICORNS */}
           <div className="flex flex-col flex-col-reverse items-center sm:flex-row justify-center gap-4 mt-4">
             <Slideshow

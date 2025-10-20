@@ -5,7 +5,7 @@ function About() {
     <>
       <Layout title={"About Me"}>
         <div>
-          <h4>
+          <h4 className="text-center">
             " I've always loved to play virtual pet site games, specifically
             breeding games."🌈
           </h4>

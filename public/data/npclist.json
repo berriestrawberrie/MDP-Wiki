@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Meowriel",
+    "desc": "She is one bell Felkin baker, she runs the Whisker & Whisk. Nestled in a quiet corner of town, the Whisker & Whisk bakery is where comfort and sweetness meet. Known for its cozy atmosphere, paw-print pastries and the scent of cardamon drifting through lace curtained windows. The bakery offers a daily menu of cozy delights from purrfectly flaky tarts to sinfully sweet cinnamon rolls. Meowriel's proud one-bell reputation isn't just about fame but a badge of humble craftsmanship. She works hard to ensure a every dish served at Whiskers & Whisk is an unforgettable bite.",
+    "smallImg": "avatars/baker.png",
+    "image": "avatars/baker-big.png"
+  },
+  {
+    "name": "Yemoa",
+    "desc": "Before her there was the empty nothingness of darkness. In an instance or an eon Yemoa drew her first breaths and with it blessed the universe with light. From the light all were born as Yemoa grew her imagination brought forth more and more life into the universe. Embuing her very essence into every living being Yemoa transformed the vast emptiness into a universe teaming with life. As the millennia passed Yemoa's energy wanned her love for life and creation urged her to expand her light throughout the countless galaxies. As a greater goddess her powers were vast but not endless.\n\nYemoa had expended too much energy bringing light into the universe; she fell into a deep regenerative sleep to restore the light essence consumed giving life. With sleep came dreams, beautiful vivid dreams of a peaceful realm with sparkling oceans and breezy meadows. Strange and colorful creatures roamed the land all were at peace as Yemoa basked in the warm sunsets in this dream realm. This realm came to be known as Geldingmire. In only a hundred years in this beautiful dream Yemoa was able to restore her light, however it was her most earnest wish to remain connected to this realm outside of existence. From her light she created an effervescent rainbow crystal, the Luminara Crystal. A departing blessing she bestowed upon the lands of Geldingmire to help maintain balance, peace and tranquility throughout the land.",
+    "smallImg": "avatars/yemoa.png",
+    "image": "avatars/yemoa-big.png"
+  },
+  {
+    "name": "Ralph",
+    "desc": "He is a no nonsense butcher whose true passion lies in the wild. A skilled hunter with years of experience tracking game through the dense forests and icy terain, he's known for his precision and respect for the animals he harvests. Though his butcher shop is immaculate and his cus are flawless, Ralph chafes at the routine of inventory logs and customer orders. He longs for the thrill of the hunt and silence of the woods. Behind the counter, he's efficient and exacting; but his heart is always somewhere deeper in the trees.",
+    "smallImg": "avatars/butcher.png",
+    "image": "avatars/Butcher-big.png"
+  }
+]

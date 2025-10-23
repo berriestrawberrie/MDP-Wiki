@@ -28,6 +28,20 @@ li::before {
   content: "❤︎";
   margin-right: 0.5em;
 }
+.icons li::before,
+.roadmap-div li::before {
+  content: "";
+  display: none;
+  margin-right: 0;
+}
+.icons img {
+  height: 38px;
+  width: 47px;
+}
+.icons li:hover {
+  transform: translateY(-5px); /* Moves the link up slightly */
+  transition: transform 0.2s ease-in-out;
+}
 
 p {
   margin-top: 5px;
@@ -173,7 +187,57 @@ td {
     transform: translate(0, -0px);
   }
 }
+.npc {
+  background-image: url("/public/avatars/button.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+}
 
+.roadmap {
+  background-image: url("/public/avatars/button.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  left: 20px;
+  width: 150px;
+  max-width: 150px;
+  font-weight: 700;
+  font-size: 16px;
+  padding-top: 5px;
+}
+
+.roadmap-div {
+  border: 4px solid #fc9b0f; /* Inner line */
+  outline: 2px solid #7f2e0a; /* Outer line */
+  width: 250px;
+  margin-bottom: 50px;
+  max-width: 200px;
+}
+
+/*TABLET*/
+@media screen and (max-width: 768px) {
+  .header_container {
+    height: 500px;
+  }
+  h2 {
+    font-size: 4rem;
+  }
+  body {
+    font-size: 14px;
+  }
+  .quicklink {
+    font-size: 14px;
+  }
+  .roadmap-div {
+    width: 180px;
+    max-width: 180px;
+  }
+  .roadmap {
+    left: 10px;
+    width: 150px;
+  }
+}
 /*PHONES */
 @media screen and (max-width: 400px) {
   .header_container {
@@ -193,21 +257,13 @@ td {
     font-size: 3rem !important;
     letter-spacing: 2px;
   }
-}
-
-/*TABLET*/
-@media screen and (max-width: 768px) {
-  .header_container {
-    height: 500px;
+  .roadmap-div {
+    width: 300px;
+    max-width: 300px;
   }
-  h2 {
-    font-size: 4rem;
-  }
-  body {
-    font-size: 14px;
-  }
-  .quicklink {
-    font-size: 14px;
+  .roadmap {
+    left: 70px;
+    width: 200px;
   }
 }
 

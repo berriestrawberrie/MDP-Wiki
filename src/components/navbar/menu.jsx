@@ -4,6 +4,8 @@ import { IoClose } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { TiThMenu } from "react-icons/ti";
+import Icons from "../content/icons";
+import { FaMapLocation } from "react-icons/fa6";
 
 export default function Menu() {
   const [openDropdown, setOpenDropdown] = useState(null);
@@ -122,7 +124,7 @@ export default function Menu() {
                 to="/ponyDesign"
                 className="block text-right px-4 py-1 hover:bg-sky-100 rounded"
               >
-                Design
+                Pony Design
               </Link>
               <span className="block text-right px-4 py-1 hover:bg-sky-100 rounded text-gray-400 cursor-not-allowed">
                 Customizing
@@ -132,7 +134,6 @@ export default function Menu() {
               </span>
             </div>
           )}
-
           <Link
             to="/breeding"
             className="w-full  font-bold  flex gap-2 items-center justify-between text-left px-4 py-2 rounded hover:bg-sky-100"
@@ -145,13 +146,24 @@ export default function Menu() {
           >
             Competitions
           </Link>
-
+          <a href="https://my-dream-pony-generator.netlify.app/" target="blank">
+            <span className="w-full  font-bold  flex gap-2 items-center justify-between text-left px-4 py-2 rounded hover:bg-sky-100">
+              Dream Generator
+            </span>
+          </a>
+          <Link
+            to="/roadmap"
+            className="w-full  font-bold  flex gap-2 items-center justify-between text-left px-4 py-2 rounded hover:bg-sky-100"
+          >
+            Roadmap <FaMapLocation className="text-2xl" />
+          </Link>
           <Link
             to="/about"
             className="w-full  font-bold  flex gap-2 items-center justify-between text-left px-4 py-2 rounded hover:bg-sky-100"
           >
             About Me
           </Link>
+          <Icons />
         </nav>
       </aside>
     </>

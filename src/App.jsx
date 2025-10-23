@@ -12,6 +12,8 @@ import Contest from "./pages/contes";
 import Social from "./pages/NPC/social";
 import Commun from "./pages/players/communicate";
 import Characters from "./pages/NPC/characters";
+import NotFound from "./pages/NotFound";
+import Roadmap from "./pages/roadmap";
 
 import "./App.css";
 
@@ -31,6 +33,9 @@ function App() {
       <Route path="/socializing" element={<Social />} />
       <Route path="/communication" element={<Commun />} />
       <Route path="/characters" element={<Characters />} />
+      <Route path="/roadmap" element={<Roadmap />} />
+      {/* Catch-all route for 404 */}
+      <Route path="*" element={<NotFound />} />
     </Routes>
   );
 }

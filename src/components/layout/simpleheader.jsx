@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 function Layout({ title, children }) {
   return (
     <>
-      <div className="fixed top-[2px] z-999 right-[10px]">
+      <div className="fixed top-[2px] z-99 right-[10px]">
         <Link to="/">
           <img className="w-[40px] rotate-12" src="/ui/shoe.png" />
         </Link>

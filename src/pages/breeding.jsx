@@ -330,11 +330,98 @@ function Breeding() {
             newest traits will have the lowest dominance for breeding. This
             means that when breeding ponies the dominant gene will be usually
             shown unless carried genes are a factor.Let's talk about how the
-            breeding and trait combination actually works.
+            breeding and trait combination actually works. Each slot is
+            calculated separate based on parents' traits.
           </p>
           <p>
-            Each slot is calculated separate based on parents' traits. Here is
-            the current logic.
+            When breeding ponies they can inherit special traits from their
+            parents. Each parent will randomly pass a carried or shown trait to
+            their offspring, these different combinations will determine the
+            baby's trait outcome. This process is repeated for each special
+            trait slot that the parent's have. In the following examples:
+          </p>
+          <ul>
+            <li>Capital Letters: Represent traits shown by the pony</li>
+            <li>Lowercase Letters: Represent traits carried by the pony</li>
+          </ul>
+          <h6>Both Parents Have Traits</h6>
+          <p>Let's look at this example.</p>
+          <ul>
+            <li>Parent #1: Shows Paint( P ) and Carries Belly( b ) </li>
+            <li>Parent #2: Shows Underbelly( U ) and Carries no traits </li>
+          </ul>
+          <p>
+            Let's simulate a breeding with these two parents. Each square
+            represents a possible outcome from the breeding. A baby will only
+            inherit a shown trait if it receives a shown or carried trait from
+            both parents.
+          </p>
+          <img className="w-full sm:w-4/5 mx-auto " src="breeding/trait.png" />
+          <p>The possible outcomes (50% Chance to show a trait):</p>
+          <ul>
+            <li>
+              <b>( P )</b> : The baby inherits paint from parent 1 but does not
+              inherit a shown/carried trait from parent 2. The baby will have no
+              shown traits.
+            </li>
+            <li>
+              <b>( b )</b> : The baby inherits belly from parent 1 but does not
+              inherit a shown/carried trait from parent 2. The baby will have no
+              shown traits.
+            </li>
+            <li>
+              <b>( U P )</b> : The baby inherits paint from parent 1 and
+              inherits underbelly from parent 2. The baby will show a trait,
+              paint is dominant to underbelly, so it will show paint.
+            </li>
+            <li>
+              <b>( U b )</b> : The baby inherits belly from parent 1 and
+              inherits underbelly from parent 2. The baby will show a trait,
+              belly is dominant to underbelly, so it will show belly.
+            </li>
+          </ul>
+          <p>
+            After the outcome is decided babies still have a 50% chance to
+            inherit a carry gene that is different from the shown trait. Let's
+            look at an example using one of the outcomes:
+          </p>
+          <ul>
+            <li>
+              <b>( U P )</b> : The baby shows paint, it has a 50% chance to
+              inherit underbelly or belly as a carried trait.
+            </li>
+          </ul>
+          <h6>One Parent Has Traits</h6>
+          <p>In this next example only one parent has traits:</p>
+          <ul>
+            <li>Parent #1: Shows Paint ( P ) and carries no traits</li>
+            <li>Parent #2: Shows and carries no traits.</li>
+          </ul>
+          <img className="w-full sm:w-4/5 mx-auto " src="breeding/1trait.png" />
+          <p>The possible outcomes (0% chance of shown trait):</p>
+          <ul>
+            <li>
+              <b>( P )</b> : The baby inherits paint from parent 1 but does not
+              inherit a shown/carried trait from parent 2. The baby will show no
+              traits.
+            </li>
+            <li>
+              <b>( P )</b> : The baby inherits paint from parent 1 but does not
+              inherit a shown/carried trait from parent 2. The baby will show no
+              traits.
+            </li>
+            <li>
+              <b>( - )</b> : The baby inherits no traits from parent 1 and
+              parent 2. The baby will show no traits.
+            </li>
+            <li>
+              <b>( - )</b> : The baby inherits no traits from parent 1 and
+              parent 2. The baby will show no traits.
+            </li>
+          </ul>
+          <p>
+            No shown traits are possible, but the offspring has a 50% chance to
+            show paint.
           </p>
           <Element name="#dominance">
             <h3>Dominance</h3>

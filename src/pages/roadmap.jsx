@@ -49,7 +49,8 @@ export default function Roadmap() {
         and lore unfold through quests and dialogue. Each phase builds toward a
         unique immersive world full of pony-powered charm. Unfortunately because
         I am a solo developer I cannot give an accurate esitmate of time for
-        these tasks but I will update as I get things done. 👍🏽
+        these tasks but I will update as I get things done. You can follow us on
+        tumblr for the latest development news!👍🏽
       </p>
       {/*START OF THE ROADMAP */}
       <div className="flex flex-col gap-2 justify-evenly items-center md:items-start md:flex-row">
@@ -68,10 +69,7 @@ export default function Roadmap() {
               <ImCheckboxUnchecked className="text-amber-950" />
               Account Confirmation
             </li>
-            <li className="flex gap-2 items-center  -ms-6">
-              <ImCheckboxUnchecked className="text-amber-950" />
-              Account Confirmation
-            </li>
+
             <li className="flex gap-2 items-center  -ms-6">
               <ImCheckboxUnchecked className="text-amber-950" />
               Forums
@@ -163,15 +161,15 @@ export default function Roadmap() {
               </li>
               <li className="flex gap-2 items-center  -ms-6">
                 <ImCheckboxUnchecked className="text-amber-950" />
-                BodyTrait (1/4)
+                BodyTrait (3/4)
               </li>
               <li className="flex gap-2 items-center  -ms-6">
                 <ImCheckboxUnchecked className="text-amber-950" />
-                FaceTrait (1/4)
+                FaceTrait (3/4)
               </li>
               <li className="flex gap-2 items-center  -ms-6">
                 <ImCheckboxUnchecked className="text-amber-950" />
-                HairTrait (1/4)
+                HairTrait (3/4)
               </li>
               <li className="flex gap-2 items-center  -ms-6">
                 <ImCheckboxChecked className="text-amber-950" />
@@ -213,6 +211,14 @@ export default function Roadmap() {
                 <ImCheckboxChecked className="text-amber-950" />
                 Test Breeding
               </li>
+              <li className="flex gap-2 items-center  -ms-6">
+                <ImCheckboxChecked className="text-amber-950" />
+                Nursery
+              </li>
+              <li className="flex gap-2 items-center  -ms-6">
+                <ImCheckboxChecked className="text-amber-950" />
+                Stables
+              </li>
             </ul>
           </div>
         </div>
@@ -244,6 +250,9 @@ export default function Roadmap() {
               <li className="flex gap-2 items-center  -ms-6">
                 <ImCheckboxUnchecked className="text-amber-950" /> Avatar
                 Mastery Skills
+              </li>
+              <li className="flex gap-2 items-center  -ms-6">
+                <ImCheckboxUnchecked className="text-amber-950" /> Profile Pages
               </li>
               <li className="flex gap-2 items-center  -ms-6">
                 <ImCheckboxUnchecked className="text-amber-950" /> Avatar Skill

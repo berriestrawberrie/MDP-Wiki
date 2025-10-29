@@ -7,6 +7,11 @@
 body {
   overflow-x: hidden;
 }
+.map {
+  cursor: grab;
+  overflow: auto;
+}
+
 .cherry-font {
   font-family: "Cherry Bomb One", system-ui;
   font-style: normal;
@@ -241,7 +246,7 @@ td {
 /*PHONES */
 @media screen and (max-width: 400px) {
   .header_container {
-    height: 300px;
+    height: 360px;
   }
   h2 {
     font-size: 3rem;

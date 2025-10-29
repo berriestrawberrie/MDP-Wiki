@@ -126,9 +126,18 @@ export default function Menu() {
               >
                 Pony Design
               </Link>
-              <span className="block text-right px-4 py-1 hover:bg-sky-100 rounded text-gray-400 cursor-not-allowed">
-                Customizing
-              </span>
+              <Link
+                to="/ponyware"
+                className="block text-right px-4 py-1 hover:bg-sky-100 rounded"
+              >
+                Ponyware
+              </Link>
+              <Link
+                to="/ponyStickers"
+                className="block text-right px-4 py-1 hover:bg-sky-100 rounded"
+              >
+                Pony Stickers
+              </Link>
               <span className="block text-right px-4 py-1 hover:bg-sky-100 rounded text-gray-400 cursor-not-allowed">
                 Glimmerpane
               </span>
@@ -158,12 +167,26 @@ export default function Menu() {
             Roadmap <FaMapLocation className="text-2xl" />
           </Link>
           <Link
+            to="/explore"
+            className="w-full  font-bold  flex gap-2 items-center justify-between text-left px-4 py-2 rounded hover:bg-sky-100"
+          >
+            Exploration
+          </Link>
+          <Link
             to="/about"
             className="w-full  font-bold  flex gap-2 items-center justify-between text-left px-4 py-2 rounded hover:bg-sky-100"
           >
             About Me
           </Link>
           <Icons />
+          <div className="flex justify-end w-full">
+            <Link
+              to="/sign-up"
+              className="w-3/5 text-white  font-bold  flex gap-2 items-center justify-end text-left px-4 py-2 rounded bg-sky-500"
+            >
+              Subscribe
+            </Link>
+          </div>
         </nav>
       </aside>
     </>

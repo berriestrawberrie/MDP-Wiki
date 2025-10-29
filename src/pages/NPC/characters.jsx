@@ -6,7 +6,7 @@ function Characters() {
   return (
     <>
       <Layout title={"Characters"}>
-        <div className="mb-4 flex gap-6 sm:gap-3">
+        <div className="mb-4 flex flex-wrap gap-6 sm:gap-3">
           {cardsData.map((card, index) => (
             <Cards
               key={index}
